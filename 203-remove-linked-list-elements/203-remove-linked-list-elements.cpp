@@ -1,53 +1,40 @@
 /**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
+ *Definition for singly-linked list.
+ *struct ListNode {
+ *   int val;
+ *   ListNode * next;
+ *   ListNode() : val(0), next(nullptr) {}
+ *   ListNode(int x) : val(x), next(nullptr) {}
+ *   ListNode(int x, ListNode *next) : val(x), next(next) {}
+ *};
  */
-class Solution {
-public:
-    ListNode* removeElements(ListNode* head, int val) {
-        if(!head) return head;
-        ListNode *ptr = head;
-        while(ptr && ptr->val == val)
+class Solution
+{
+    public:
+        ListNode* removeElements(ListNode *head, int val)
         {
-            ListNode *temp = ptr;
-            ptr = ptr->next;
-            delete temp;
-        }
-        head = ptr;
-        // while(ptr && ptr->next)
-        // {
-        //     if(ptr->next->val == val)
-        //     {
-        //         ListNode *temp = ptr->next;
-        //         ptr->next = temp->next;
-        //         ptr = ptr->next;
-        //         delete temp;
-        //     }
-        //     else
-        //     {
-        //         ptr = ptr->next;
-        //     }
-        // }
-        while(ptr && ptr->next!=NULL)
-        {
-            
-             if(ptr->next->val==val)
+            if (!head) return head;
+            ListNode *ptr = head;
+            while (ptr && ptr->val == val)
             {
-              ListNode *temp = ptr->next;
-                ptr->next = temp->next;
+                ListNode *temp = ptr;
+                ptr = ptr->next;
                 delete temp;
             }
-            else
+            head = ptr;
+            while (ptr && ptr->next)
             {
-                ptr = ptr->next;
+                if (ptr->next->val == val)
+                {
+                    ListNode *temp = ptr->next;
+                    ptr->next = temp->next;
+                    delete temp;
+                }
+                else
+                {
+                    ptr = ptr->next;
+                }
             }
+            return head;
         }
-        return head;
-    }
 };
