@@ -5,23 +5,23 @@ class Solution
         {
             sort(intervals.begin(), intervals.end());
             int c = 0;
-            // for (auto &i: intervals)
-            // {
-            //     for (auto &j: i)
-            //         cout << j << " ";
-            //     cout << endl;
-            // }
-            int start = intervals[0][0], end = intervals[0][1];
+           	// for (auto &i: intervals)
+           	// {
+           	//     for (auto &j: i)
+           	//         cout << j << " ";
+           	//     cout << endl;
+           	// }
+            vector<vector < int>> ans = { intervals[0]
+            };
             for (int i = 1; i < intervals.size(); i++)
             {
-                if (intervals[i][0] >= end)	// intervals can't be merged
+                if (intervals[i][0] >= ans.back()[1])	// intervals can't be merged
                 {
-                    start = intervals[i][0];
-                    end = intervals[i][1];
+                    ans.back() = intervals[i];
                 }
                 else
                 {
-                    end = min(end, intervals[i][1]);
+                    ans.back()[1] = min(ans.back()[1], intervals[i][1]);
                     c++;
                 }	// intervals can be merged
             }
