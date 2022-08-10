@@ -16,7 +16,6 @@ class Solution
 
     TreeNode* sortedArrayToBST(vector<int> &nums)
     {
-
         n = nums.size() - 1;
         TreeNode *tree = NULL;
         tree = make_bst(nums, tree, 0, n);
