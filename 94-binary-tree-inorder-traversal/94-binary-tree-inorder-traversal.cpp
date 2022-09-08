@@ -13,21 +13,17 @@ class Solution
 {
     public:
         vector<int> v;
-
-    void inTraversal(TreeNode *node)
+    void Inorder(TreeNode *root)
     {
-        if (!node) return;
-        else
-        {
-            inTraversal(node->left);
-            v.push_back(node->val);
-            inTraversal(node->right);
-        }
+        if (root == NULL)
+            return;
+        Inorder(root->left);
+        v.push_back(root->val);
+        Inorder(root->right);
     }
-
     vector<int> inorderTraversal(TreeNode *root)
     {
-        inTraversal(root);
+        Inorder(root);
         return v;
     }
 };
