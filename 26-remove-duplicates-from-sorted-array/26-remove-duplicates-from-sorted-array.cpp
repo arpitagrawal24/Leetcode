@@ -3,17 +3,16 @@ class Solution
     public:
         int removeDuplicates(vector<int> &nums)
         {
-            int n = nums.size(), x = 0;
-            unordered_map<int,int> m;
-            for (int i = 0; i < n; i++)
+            int n = nums.size(), res = 0, curr = nums[0];
+            for (int i = 1; i < n; i++)
             {
-                if(m.find(nums[i]) == m.end())
+
+                if (curr != nums[i])
                 {
-                    m[nums[i]] = 1;
-                    nums[x] = nums[i];
-                    x++;
+                    nums[++res] = nums[i];
+                    curr = nums[i];
                 }
             }
-            return x;
+            return res + 1;
         }
 };
