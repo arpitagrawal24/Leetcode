@@ -11,15 +11,16 @@ class Solution
     int mod = 1e9+7;
     int countWays(int n)
     {
-        // your code here
-        vector<int> dp(n+1,-1);
-        dp[0] = 1;
-        dp[1] = 1;
+        // your code for dp with space optimization
+        int pre1 = 1;
+        int pre2 = 1;
         for(int i = 2; i < n+1; i++)
         {
-            dp[i] = (dp[i-1]%mod + dp[i-2]%mod)%mod;
+            int cur = (pre1%mod + pre2%mod)%mod;
+            pre2 = pre1;
+            pre1 = cur; 
         }
-        return dp[n];
+        return pre1;
     }
 };
 
