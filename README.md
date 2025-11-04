@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0189-rotate-array](https://github.com/arpitagrawal24/Leetcode/tree/master/0189-rotate-array) |
+| [0283-move-zeroes](https://github.com/arpitagrawal24/Leetcode/tree/master/0283-move-zeroes) |
 ## Math
 |  |
 | ------- |
@@ -15,4 +16,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0189-rotate-array](https://github.com/arpitagrawal24/Leetcode/tree/master/0189-rotate-array) |
+| [0283-move-zeroes](https://github.com/arpitagrawal24/Leetcode/tree/master/0283-move-zeroes) |
 <!---LeetCode Topics End-->
