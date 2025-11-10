@@ -4,18 +4,10 @@ public:
         vector<int> res;
         map<int, int> m;
         for (int i = 0; i < nums.size(); i++) {
-            // for (int j = i + 1; j < nums.size(); j++) {
-            //     if (nums[j] == target - nums[i]) {
-            //         res.push_back(i);
-            //         res.push_back(j);
-            //         break;
-            //     }
-            // }
-
-            if(m.find(target - nums[i]) != m.end() && i != m[target - nums[i]]){
+            if (m.find(target - nums[i]) != m.end() &&
+                i != m[target - nums[i]]) {
                 return {i, m[target - nums[i]]};
             }
-
             m[nums[i]] = i;
         }
         return {};
