@@ -41,4 +41,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0268-missing-number](https://github.com/arpitagrawal24/Leetcode/tree/master/0268-missing-number) |
 | [1502-can-make-arithmetic-progression-from-sequence](https://github.com/arpitagrawal24/Leetcode/tree/master/1502-can-make-arithmetic-progression-from-sequence) |
+## Database
+|  |
+| ------- |
+| [0577-employee-bonus](https://github.com/arpitagrawal24/Leetcode/tree/master/0577-employee-bonus) |
 <!---LeetCode Topics End-->
